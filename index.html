@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריכי AI-אריאל AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #00cec9;
+            --background-color: #0c0c0c;
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.1),
+                rgba(255,255,255,0.1) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+            animation: headerAnimation 20s linear infinite;
+        }
+
+        @keyframes headerAnimation {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(50%, 50%);
+            }
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .video-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--primary-color), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-item:hover::before {
+            opacity: 0.2;
+        }
+
+        .video-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .video-item h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .video-item:nth-child(1) { animation-delay: 0.2s; }
+        .video-item:nth-child(2) { animation-delay: 0.4s; }
+        .video-item:nth-child(3) { animation-delay: 0.6s; }
+        .video-item:nth-child(4) { animation-delay: 0.8s; }
+        .video-item:nth-child(5) { animation-delay: 1s; }
+        .video-item:nth-child(6) { animation-delay: 1.2s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://arielai.co.il/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fmamahood-be367.appspot.com%2Fo%2FexpertFiles%252Fb10XkBgWHvXPL5ac4Xez5N8M3gA3%252Fwebsite%252F1716210729449-DALL%25C2%25B7E%25202024-05-20%252016.11.45%2520-%2520A%2520logo%2520for%2520a%2520business%2520named%2520%27Ariel%2520AI%27%2520that%2520focuses%2520on%2520AI%2520usage%2520tutorials%2520and%2520news%2520on%2520social%2520media.%2520The%2520logo%2520should%2520be%2520modern%2520and%2520tech-savvy%252C%2520featurin.webp%3Falt%3Dmedia%26token%3D6025a106-daee-4374-b95d-f73cec6765e3&w=640&q=75" alt="Ariel AI Logo" class="logo">
+            </div>
+            <h1>מדריכי AI-אריאל AI</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="video-container">
+            <div class="video-item fade-in">
+                <h3>הדרכה מקיפה על perplexity ועל השימוש בו!</h3>
+                <iframe src="https://www.youtube.com/embed/z6wHpp07_2k" allowfullscreen></iframe>
+            </div>
+            <div class="video-item fade-in">
+                <h3>מדריך ליצירת דמות עקבית במידג'רני! (Midjourney)</h3>
+                <iframe src="https://www.youtube.com/embed/txYltXb42x8" allowfullscreen></iframe>
+            </div>
+            <div class="video-item fade-in">
+                <h3>מדריך יצירת משחקים עם Claude AI והפצתם לכל העולם</h3>
+                <iframe src="https://www.youtube.com/embed/v_PxytAIf_I" allowfullscreen></iframe>
+            </div>
+            <div class="video-item fade-in">
+                <h3>מדריך ליצירת תמונות בחינם לגמרי ב-FLUX</h3>
+                <iframe src="https://www.youtube.com/embed/-kFlA4oLr9E" allowfullscreen></iframe>
+            </div>
+            <div class="video-item fade-in">
+                <h3>יצירת סרטונים בחינם בעזרת Runway Gen 3 Alpha Turbo</h3>
+                <iframe src="https://www.youtube.com/embed/XRnbjsXUZ9M" allowfullscreen></iframe>
+            </div>
+            <div class="video-item fade-in">
+                <h3>הדיפפייק המושלם – איך יוצרים אותו בקלות?</h3>
+                <iframe src="https://www.youtube.com/embed/LbvccJwmzWs" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
